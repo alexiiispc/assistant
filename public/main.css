@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content .header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.content .header .left-header{
+    font-size: 25px;
+    color: #1F2937;
+}
+.btn-input{
+    height: 37.33px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 1px gray;
+    border-radius: 30px;
+    background: #FFFF;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.content .body{
+    background: #EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 300px;
+}
+.content .body .left-body{
+    background: #FFFF;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    width: 45%;
+    min-height: 300px;
+}
+.content .body .left-body span{
+    font-size: 15px;
+    background: #FFFF;
+    margin-bottom: 5px;
+}
+.content .body .left-body textarea{
+    border-radius: 8px;
+    border: transparent;
+    padding: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 300px;
+    background: #F8F8F8;
+}
+.content .body .right-body{
+    background: #FFFF;
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    width: 45%;
+    min-height: 300px;
+}
+.content .body .right-body span{
+    font-size: 15px;
+    background: #FFFF;
+    margin-bottom: 5px;
+}
+.content .body .right-body p{
+    border-radius: 8px;
+    border: transparent;
+    padding: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 300px;
+    background: #F8F8F8;
+}
+.content .body .center-body{
+    width: 10%;
+    min-height: 300px;
+    display: flex;
+    background: none;
+    justify-content: center;
+    align-items: center;
+}
+.btn-generate{
+    background: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-generate button{
+    background: #1f2937;
+    color: #FFFF;
+    width: 150px;
+    cursor: pointer;
+}
+/* ALERTA */
+.alert-message {
+    position: fixed;
+    top: -110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+    background: #ffff;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    transition: all 0.5s ease;
+  }
+  .alert-message p {
+    font-size: 14px;
+  }
+@media (max-width: 840px){
+    .content{
+        width: 95%;
+    }
+}
+@media (max-width: 700px){
+    .content .body{
+        flex-direction: column;
+    }
+    .content .body .left-body{
+        width: 100%;
+    }
+    .content .body .right-body{
+        width: 100%;
+    }
+    .content .body .center-body{
+        width: 100%;
+        min-height: 80px !important;
+    }
+}
+@media (max-width:870px){
+    .content .header{
+        flex-direction: column;
+        
+    }
+    .content .header .left-header{
+        margin-bottom: 20px;
+    }
+    .content .header .left-header span{
+        margin-top: -50px;
+        margin-bottom: 20px !important;
+    }
+
+}
+
+
+
+/*CODE */
+
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 1em;
+    overflow-x: auto;
+  }
+  
+  code {
+    font-family: 'Courier New', monospace;
+  }
+  
+  pre code {
+    display: block;
+    line-height: 1.5;
+  }
+  
+  /* Estilos para resaltar la sintaxis */
+  
+  code,
+  pre {
+    color: #abb2bf;
+    background: #1f2937;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    border-radius: 0.3em;
+    margin: 0;
+    overflow-x: auto;
+  }
+  
+  /* Estilos para diferentes tokens de sintaxis */
+  
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #5c6370;
+  }
+  
+  .token.punctuation {
+    color: #abb2bf;
+  }
+  
+  .token.namespace {
+    opacity: 0.7;
+  }
+  
+  .token.operator,
+  .token.boolean,
+  .token.number {
+    color: #d19a66;
+  }
+  
+  .token.property,
+  .token.function {
+    color: #61afef;
+  }
+  
+  .token.tag,
+  .token.class-name,
+  .token.constant,
+  .token.symbol {
+    color: #e06c75;
+  }
+  
+  .token.selector,
+  .token.important,
+  .token.atrule,
+  .token.keyword,
+  .token.builtin {
+    color: #c678dd;
+  }
+  
+  .token.string,
+  .token.char,
+  .token.attr-value,
+  .token.regex,
+  .token.variable {
+    color: #98c379;
+  }
+  
+  .token.attr-name,
+  .token.entity,
+  .token.url {
+    color: #d19a66;
+    font-weight: bold;
+  }
+  
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  
+  .token.italic {
+    font-style: italic;
+  }

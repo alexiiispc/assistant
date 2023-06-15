@@ -1,0 +1,145 @@
+.text-img a{
+    text-decoration: none;
+    color: #141414;
+    border-bottom: 0.5px solid #141414;
+
+}
+/*FORM*/
+.w100{
+    width: 100%;
+}
+.w80{
+    width: 80%;
+}
+.w70{
+    width: 70%;
+}
+.w60{
+    width: 60%;
+}
+.w40{
+    width: 40%;
+}
+.w30{
+    width: 30%;
+}
+.w20{
+    width: 20%;
+}
+.w50{
+    width: 50%;
+}
+.w33{
+    width: 33.3%;
+}
+
+.input1{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.input-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+    margin-top: 20px;
+    align-items: center;
+
+}
+.input{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input p{
+    font-size: 13px;
+    color: #141414;
+    margin-bottom: 5px;
+}
+.input input{
+    height: 40px;
+    border: 0.5px solid #cdcdcd;
+    padding: 0 10px;
+    border-radius: 8px;
+    background: none;
+    outline: none;
+}
+.input div.f-input{
+    min-height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.5px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: none;
+    outline: none;
+    display: flex;
+    
+    align-items: center;
+    
+}
+.input div.f-input input{
+    border: none;
+    outline: none;
+    background: none;
+}
+.input textarea{
+    min-height: 80px;
+    max-height: 150px;
+    
+    max-width: 100%;
+    min-width: 95%;
+    border: 0.5px solid #cdcdcd;
+    padding: 10px;
+    border-radius: 8px;
+    background: none;
+    outline: none;
+}
+.input select{
+    height: 40px;
+    border: 0.5px solid #cdcdcd;
+    padding: 0 10px;
+    border-radius: 8px;
+    background: none;
+    outline: none;
+}
+
+
+@media (max-width: 460px){
+    .input1{
+        flex-direction: column;
+    }
+    .w30{
+        width: 100%;
+    }
+    .w70{
+        width: 100%;
+    }
+   
+    .w100{
+        width: 100%;
+    }
+    .w50{
+        width: 100%;
+    }
+    .w20{
+        width: 100%;
+    }
+    .w80{
+        width: 100%;
+    }
+    .w33{
+        width: 100%;
+    }
+    .w60{
+        width: 100%;
+    }
+    .w40{
+        width: 100%;
+    }
+}

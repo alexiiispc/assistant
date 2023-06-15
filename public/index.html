@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistant - Cristhian Palacios</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="form-css.css" />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <div class="left-header">
+          Assistant<!--<i id="settings-modal" style="margin-left: 8px;background: none;font-size: 18px;cursor: pointer;" class="bi bi-gear"></i>-->
+          <p style="font-size: 13px; color: #4b5563">
+            Powered by Cristhian Palacios
+          </p>
+        </div>
+        <div
+          class="right-header"
+          style="display: flex; gap: 10px; flex-wrap: wrap"
+        >
+          <select class="btn-input" onchange="handleOptionSelected(this.value)">
+            <option value="1">Paraphrase</option>
+            <option value="2">Grammar correction english</option>
+            <option value="3">Grammar correction spanish</option>
+            <option value="4">Keywords from text</option>
+            <option value="5">Essay outline</option>
+            <option value="6">Chat</option>
+          </select>
+          
+          <a href="https://bibify.org/" target="_blank" class="btn-input" style="text-decoration: none;display: flex;justify-content: center;align-items: center;">Generate appointment</a>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="left-body">
+          <div class="btn-generate">
+            <span id="lblTitle" style="font-weight: 600">Enter text to paraphrase</span>
+              <i onclick="clearText(this)" style="background: none;cursor: pointer;display: none;" id="btn-clear" class="bi bi-trash-fill"></i>
+          </div>
+          <textarea id="in-text" onkeyup="validate_in_text(this)" onchange="validate_in_text(this)"></textarea>
+          <div class="btn-generate">
+            <select class="btn-input" id="idioma" onchange="localStorage.setItem('idioma',this.value)">
+              <option value=", response in english">English</option>
+              <option value=", response in spanish">Spanish</option>
+            </select>
+            <button class="btn-input" id="btn-input">Generate</button>
+          </div>
+        </div>
+        <div class="center-body">
+          <i
+            class="bi bi-arrow-repeat"
+            style="background: none; font-size: 25px"
+          ></i>
+        </div>
+        <div class="right-body">
+          <div
+            style="
+              background: none;
+              display: flex;
+              justify-content: space-between;
+            "
+          >
+            <span style="font-weight: 600">Output text</span>
+            <button
+              id="copyButton"
+              style="
+                background: none;
+                border: none;
+                border-bottom: 0.5px solid rgb(182, 182, 182);
+                cursor: pointer;
+              "
+            >
+              copy text
+            </button>
+          </div>
+          <p id="out-text">
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <article class="modal-container">
+        <header class="modal-container-header">
+          <h1 class="modal-container-title">Settings</h1>
+          <button class="icon-button" onclick="modal_('false')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                fill="currentColor"
+                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+              />
+            </svg>
+          </button>
+        </header>
+        <section class="modal-container-body rtf">
+          <div class="input1">
+            <div class="input w100">
+              <p>API OpenAI</p>
+              <input type="text" id="txtApi" />
+            </div>
+          </div>
+        </section>
+        <footer class="modal-container-footer">
+          <button class="button is-ghost" onclick="modal_('false')">
+            Decline
+          </button>
+          <button class="button is-primary" id="save-settings">Accept</button>
+        </footer>
+      </article>
+    </div>
+
+    <div class="alert-message" style="background: #ffff">
+      <p id="message-alert" style="background: none"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html>
